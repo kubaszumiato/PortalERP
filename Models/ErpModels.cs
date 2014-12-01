@@ -32,7 +32,7 @@ namespace PortalERP.Models
             public int quantity { get; set; }
         }
 
-        public class Order
+        public class Document
         {
             public int Id { get; set; }
             public string Guid { get; set; }
@@ -46,6 +46,14 @@ namespace PortalERP.Models
             public IList<Item> Items { get; set; }
         }
 
+        public class Order : Document
+        {
+            
+        }
+        public class Invoice : Document
+        {
+
+        }
         public class Address
         {
             public Contact Contact { get; set; }    
