@@ -14,23 +14,23 @@ namespace PortalERP.Controllers
     public class CustomersController : ApiController
     {
         // GET: api/Customers
-        public IEnumerable<ErpModels.Customer> Get()
+        public IEnumerable<Customer> Get()
         {
             object c = new object();
-            return (IEnumerable<ErpModels.Customer>)c;
+            return (IEnumerable<Customer>)c;
         }
 
         // GET: api/Customers/5
-        public ErpModels.Customer Get(int id)
+        public Customer Get(int id)
         {
-            ErpModels.Customer entity;
+            Customer entity;
 
             using (StreamReader file = File.OpenText(@""))
             {
                 using (JsonTextReader reader = new JsonTextReader(file))
                 {
                     var o = (JObject) JToken.ReadFrom(reader);
-                    entity = o.ToObject<ErpModels.Customer>();
+                    entity = o.ToObject<Customer>();
                 }
             }
 

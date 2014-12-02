@@ -11,7 +11,7 @@ namespace PortalERP.Controllers
     public class InvoicesController : ApiController
     {
         // GET: api/Invoices
-        public IEnumerable<ErpModels.Invoice> Get()
+        public IEnumerable<Invoice> Get()
         {
             System.Configuration.Configuration rootWebConfig1 =
                 System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(null);
@@ -25,12 +25,13 @@ namespace PortalERP.Controllers
                 else
                     Console.WriteLine("No customsetting1 application string");
             }
-            return new string[] { "value1", "value2" };
+            return new List<Invoice>();
+            
 
         }
 
         // GET: api/Invoices/5
-        public ErpModels.Invoice Get(int id)
+        public Invoice Get(int id)
         {
             return InvoicesService.GetInvoice(id);
         }
