@@ -44,18 +44,9 @@ namespace PortalERP.Models
             public IList<string> Tags { get; set; }
             public IList<Item> Items { get; set; }
         }
+        
 
 
-
-
-    public class Item
-    {
-        public int id { get; set; }
-        public string code { get; set; }
-        public string name { get; set; }
-        public double price { get; set; }
-        public int quantity { get; set; }
-    }
 
     public class Invoice
     {
