@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PortalERP.Models;
 
 namespace PortalERP.Controllers
@@ -15,13 +18,23 @@ namespace PortalERP.Controllers
         {
             object c = new object();
             return (IEnumerable<ErpModels.Customer>)c;
-
         }
 
         // GET: api/Customers/5
-        public string Get(int id)
+        public ErpModels.Customer Get(int id)
         {
-            return "value";
+            ErpModels.Customer entity;
+
+            using (StreamReader file = File.OpenText(@""))
+            {
+                using (JsonTextReader reader = new JsonTextReader(file))
+                {
+                    var o = (JObject) JToken.ReadFrom(reader);
+                    entity = o.ToObject<ErpModels.Customer>();
+                }
+            }
+
+            return entity;
         }
 
         // POST: api/Customers
