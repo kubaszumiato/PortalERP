@@ -32,7 +32,7 @@ namespace PortalERP.Models
             public int quantity { get; set; }
         }
 
-        public class Order
+        public class Document
         {
             public int Id { get; set; }
             public string Guid { get; set; }
@@ -79,16 +79,19 @@ namespace PortalERP.Models
         public IList<Item> items { get; set; }
     }
 
+    public class Order : ErpModels.Document
+    {
 
-
-        public class Address
-        {
-            public Contact Contact { get; set; }    
-            public double Latitude { get; set; }
-            public double Longitude { get; set; }
-            public City City { get; set; }
-        }
     }
+
+    public class Address
+    {
+        public Contact Contact { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public City City { get; set; }
+    }
+
 
     public class City
     {
