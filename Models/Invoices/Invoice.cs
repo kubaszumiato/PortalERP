@@ -7,30 +7,30 @@ namespace PortalERP.Models.Invoices
 {
     public class Invoice
     {
-        public string _id { get; set; }
-        public int index { get; set; }
-        public string guid { get; set; }
-        public bool isActive { get; set; }
-        public string value { get; set; }
-        public string numerator { get; set; }
-        public string referenceNumber { get; set; }
-        public string customer { get; set; }
-        public string email { get; set; }
-        public string phone { get; set; }
-        public string address { get; set; }
-        public string description { get; set; }
-        public string registered { get; set; }
-        public double latitude { get; set; }
-        public double longitude { get; set; }
-        public IList<string> tags { get; set; }
-        public IList<Element> items { get; set; }
+        public string Id { get; set; }
+        public int Index { get; set; }
+        public string Guid { get; set; }
+        public bool IsActive { get; set; }
+        public string Value { get; set; }
+        public string Numerator { get; set; }
+        public string ReferenceNumber { get; set; }
+        public string Customer { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public string Description { get; set; }
+        public string Registered { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public IList<string> Tags { get; set; }
+        public IList<InvoiceElement> Elements{ get; set; }
     }
     public class InvoiceElement
     {
-        public int id { get; set; }
-        public string code { get; set; }
-        public string name { get; set; }
-        public double price { get; set; }
-        public int quantity { get; set; }
+        public int Id { get; set; }
+        public string Code { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public int Quantity { get; set; }
     }
 }
