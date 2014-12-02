@@ -10,7 +10,7 @@
     <ProjectGuid>{43FD31E8-8278-4463-A6E5-17B3E55FD87A}</ProjectGuid>
     <ProjectGuid>{CCC558A5-3ABC-4267-804C-D438A864C37F}</ProjectGuid>
     <ProjectGuid>{43FD31E8-8278-4463-A6E5-17B3E55FD87A}</ProjectGuid>
-    <ProjectGuid>{7438C341-2BC6-4F3C-A8CE-42A131AD4BEA}</ProjectGuid>
+    <ProjectGuid>{43FD31E8-8278-4463-A6E5-17B3E55FD87A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -221,6 +221,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\OrdersService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
