@@ -1,97 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using PortalERP.Models;
+using PortalERP.Services;
 
 namespace PortalERP.Controllers
 {
-    public class OrdersController : Controller
+    public class OrdersController : ApiController
     {
-        //
-        // GET: /Orders/
-        public ActionResult Index()
+        // GET: api/Orders
+        public IEnumerable<Order> Get()
         {
-            return View();
+            return OrdersService.GetOrders();
         }
 
-        //
-        // GET: /Orders/Details/5
-        public ActionResult Details(int id)
+        // GET: api/Orders/5
+        public Order Get(int id)
         {
-            return View();
+            return OrdersService.GetOrder(id);
         }
 
-        //
-        // GET: /Orders/Create
-        public ActionResult Create()
+        // POST: api/Orders
+        public void Post([FromBody]string value)
         {
-            return View();
         }
 
-        //
-        // POST: /Orders/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        // PUT: api/Orders/5
+        public void Put(int id, [FromBody]string value)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
 
-        //
-        // GET: /Orders/Edit/5
-        public ActionResult Edit(int id)
+        // DELETE: api/Orders/5
+        public void Delete(int id)
         {
-            return View();
-        }
-
-        //
-        // POST: /Orders/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Orders/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Orders/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }
