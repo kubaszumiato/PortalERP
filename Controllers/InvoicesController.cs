@@ -4,21 +4,22 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using PortalERP.Models;
 
 namespace PortalERP.Controllers
 {
     public class InvoicesController : ApiController
     {
         // GET: api/Invoices
-        public IEnumerable<string> Get()
+        public IEnumerable<ErpModels.Invoice> Get()
         {
-            return new string[] { "value1", "value2" };
+            return InvoicesService.GetInvoices();
         }
 
         // GET: api/Invoices/5
-        public string Get(int id)
+        public ErpModels.Invoice Get(int id)
         {
-            return "value";
+            return InvoicesService.GetInvoice(id);
         }
 
         // POST: api/Invoices

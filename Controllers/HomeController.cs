@@ -11,7 +11,7 @@ namespace PortalERP.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            ViewBag.Test = "test";
             return View();
         }
     }
