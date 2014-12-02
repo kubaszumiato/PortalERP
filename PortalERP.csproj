@@ -9,7 +9,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{43FD31E8-8278-4463-A6E5-17B3E55FD87A}</ProjectGuid>
     <ProjectGuid>{CCC558A5-3ABC-4267-804C-D438A864C37F}</ProjectGuid>
-    <ProjectGuid>{CCC558A5-3ABC-4267-804C-D438A864C37F}</ProjectGuid>
+    <ProjectGuid>{43FD31E8-8278-4463-A6E5-17B3E55FD87A}</ProjectGuid>
+    <ProjectGuid>{7438C341-2BC6-4F3C-A8CE-42A131AD4BEA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,11 +51,17 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.2\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.2\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -215,10 +222,12 @@
     <Compile Include="Models\ErpModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invoices\Invoice.cs" />
+    <Compile Include="Services\CustomersService.cs" />
     <Compile Include="Services\InvoicesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\OrdersService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
