@@ -8,6 +8,7 @@ using System.Web.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PortalERP.Models;
+using PortalERP.Models.Customers;
 
 namespace PortalERP.Controllers
 {
