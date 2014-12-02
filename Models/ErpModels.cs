@@ -8,8 +8,7 @@ using Microsoft.Owin.BuilderProperties;
 
 namespace PortalERP.Models
 {
-    public class ErpModels
-    {
+
         public class Customer
         {
             public string Id { get; set; }
@@ -45,7 +44,7 @@ namespace PortalERP.Models
             public IList<string> Tags { get; set; }
             public IList<Item> Items { get; set; }
         }
-    }
+
 
 
 
@@ -79,7 +78,7 @@ namespace PortalERP.Models
         public IList<Item> items { get; set; }
     }
 
-    public class Order : ErpModels.Document
+    public class Order : Document
     {
 
     }

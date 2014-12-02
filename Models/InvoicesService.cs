@@ -7,12 +7,12 @@ namespace PortalERP.Models
 {
     public class InvoicesService
     {
-        public static ErpModels.Invoice GetInvoice(int Id)
+        public static Invoice GetInvoice(int Id)
         {
             return null;
         }
 
-        public static List<ErpModels.Invoice> GetInvoices()
+        public static List<Invoice> GetInvoices()
         {
             return null;
         }
