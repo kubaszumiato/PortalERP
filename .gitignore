@@ -7,6 +7,9 @@
 *.sln.docstates
 *.sln
 
+# Nuget config
+.nuget/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

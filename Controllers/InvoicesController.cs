@@ -5,19 +5,36 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using PortalERP.Models;
+using PortalERP.Models.Invoices;
+using PortalERP.Services;
 
 namespace PortalERP.Controllers
 {
     public class InvoicesController : ApiController
     {
         // GET: api/Invoices
-        public IEnumerable<ErpModels.Invoice> Get()
+        public IEnumerable<Invoice> Get()
         {
             return InvoicesService.GetInvoices();
+            //System.Configuration.Configuration rootWebConfig1 =
+            //    System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(null);
+            //if (rootWebConfig1.AppSettings.Settings.Count > 0)
+            //{
+            //    System.Configuration.KeyValueConfigurationElement customSetting =
+            //        rootWebConfig1.AppSettings.Settings["customsetting1"];
+            //    if (customSetting != null)
+            //        Console.WriteLine("customsetting1 application string = \"{0}\"",
+            //            customSetting.Value);
+            //    else
+            //        Console.WriteLine("No customsetting1 application string");
+            //}
+            //return new List<Invoice>();
+
+
         }
 
         // GET: api/Invoices/5
-        public ErpModels.Invoice Get(int id)
+        public Invoice Get(string id)
         {
             return InvoicesService.GetInvoice(id);
         }
